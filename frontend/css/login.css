@@ -47,6 +47,9 @@ button {
 .signin{
     margin-left: 29px;
 }
+.fa-brands {
+    margin-right: 10px;
+}
 button {
     padding: 15px 5px 15px 5px;
     font-size: 15px;
