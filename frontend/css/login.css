@@ -1,0 +1,59 @@
+body{
+    width: 90%;
+    margin: auto;
+}
+input{
+    padding: 10px 20% 10px 5px;
+}
+.forget_password{
+    margin-left: 17%;
+}
+button {
+    padding: 15px 5px 15px 5px;
+    font-size: 15px;
+    width: 32%;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    background-color: rgb(45, 43, 43);
+    color: white;
+}
+.bottom{
+    display: flex;
+}
+.login{
+    margin-left: 5px;
+    font-size: 17px;
+    margin-top: 15px;
+}
+#loggedin{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fb {
+    background-color: dodgerblue;
+    margin-right: 100px;
+}
+
+.google {
+    background-color: orangered;
+}
+
+.vk {
+    background-color: steelblue;
+}
+.signin{
+    margin-left: 29px;
+}
+button {
+    padding: 15px 5px 15px 5px;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    color: white;
+}

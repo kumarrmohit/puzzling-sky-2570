@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="signup">
+        <div>
+            <div id="container">
+                <h1>Create Account</h1>
+                <div>
+                    <p class="first">First name*</p>
+                    <br>
+                    <p class="second">Last name*</p>
+                </div>
+                <input type="text" id="firstname" placeholder="your first name">
+
+                <input type="text" id="lastname" placeholder="your last name">
+
+                <p>Email*</p>
+                <input type="text" id="email" placeholder="you@domain.com">
+                <p>Password*</p>
+                <input type="password" id="pass" placeholder="at least 6 characters">
+                <p>Confirm*</p>
+                <input type="password" id="confirm" placeholder="confirm password">
+                <br>
+                <p>By clicking "Create my Account" I agree that:
+                    <li> I may receive communication emails from GearBest about order and delivery.</li>
+                    <li>I may receive new products and promotion emails from GearBest.</li>
+                </p>
+                <br>
+                <button onclick="onSignup()">Create my Account</button>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <h2>Use Your Account from</h2>
+                <a href="https://www.facebook.com/login.php/"> <button class="fb"><i
+                            class="fa-brands fa-facebook"></i>Log In with Facebook</button></a>
+                <br>
+                <a href="https://www.google.com/"><button class="google"><i class="fa-brands fa-google"></i>Log In with
+                        Google</button></a>
+                <br>
+                <a href="https://vk.com/?lang=en"><button class="vk"><i class="fa-brands fa-vk"></i>Log In with
+                        VK</button></a>
+                <br>
+                <h3>Already have an account?</h3>
+
+                <button class="signin">Sign In Now</button>
+                <br>
+                <br>
+                <a href="">Return to the home page</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
