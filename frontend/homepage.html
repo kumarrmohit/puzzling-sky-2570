@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div id="navbar">
+        <a class="anchorlogo" href="./homepage.html"> <img class="logo"
+                src="https://www.gearbest.com/u_file/2211/10/photo/logogearbest-5cd0.webp" alt=""></a>
+        <input class="search" type="text" placeholder="Search any product here">
+        <br>
+        <br>
+        <div class="icon">
+            <a href="./signup.html"><i id="profile" class="fa-solid fa-user fa-2xl"></i></a>
+
+            <i class="fa-solid fa-bag-shopping fa-2xl"></i>
+        </div>
+
+    </div>
+
+    <!-- --------------------------------------------------------- -->
+    <br>
+    <br>
+    <div id="main">
+        <img src="https://www.gearbest.com/u_file/2212/12/photo/105254957714338494-195a.jpg?x-oss-process=image/format,webp/resize,m_lfit,h_0,w_1920"
+            id="slideimage">
+    </div>
+
+    <h1>Featured Products</h1>
+
+</body>
+
+</html>
+
+<script>
+    function first() {
+        document.getElementById("slideimage").src = "https://www.gearbest.com/u_file/2302/09/photo/-2-f8a7.jpg?x-oss-process=image/format,webp/resize,m_lfit,h_0,w_1920"
+    }
+    function second() {
+        document.getElementById("slideimage").src = "https://www.gearbest.com/u_file/2212/12/photo/105254957714338494-195a.jpg?x-oss-process=image/format,webp/resize,m_lfit,h_0,w_1920"
+    }
+    setInterval(first, 2000)
+    setInterval(second, 4000)
+
+</script>

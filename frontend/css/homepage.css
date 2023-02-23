@@ -1,0 +1,53 @@
+body{
+    width: 90%;
+    margin: auto;
+
+}
+.logo{
+    
+    width: 70%;
+}
+.anchorlogo{
+    width: 20%;
+    /* border: 1px solid red; */
+    padding: 0px 0px 0px 40px;
+
+}
+.search{
+    /* padding: 20px 0px 15px 400px; */
+    margin-top: 2px;
+    width: 50%;
+    border-radius: 20px;
+    /* padding:10px 20px 10px 0; */
+    border:1px solid black;
+   /* // margin-left:20%; */
+   padding: 0px 10px 0px 5px;
+
+}
+
+#profile{
+    margin-right: 40px;
+}
+.icon{
+    margin-top: 22px;
+ 
+   
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+input{
+    padding: 10px 20% 10px 5px;
+}
+
+
+/* ==================== */
+#main{
+    position: relative;
+}
+img{
+   
+    width: 100%;
+}
