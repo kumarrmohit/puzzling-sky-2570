@@ -1,0 +1,107 @@
+body{
+    width: 90%;
+    margin: auto;
+}
+.logo{
+    
+    width: 70%;
+}
+.anchorlogo{
+    width: 20%;
+    /* border: 1px solid red; */
+    padding: 0px 0px 0px 40px;
+
+}
+.search{
+    /* padding: 20px 0px 15px 400px; */
+    margin-top: 2px;
+    width: 50%;
+    border-radius: 20px;
+    /* padding:10px 20px 10px 0; */
+    border:1px solid black;
+   /* // margin-left:20%; */
+   padding: 0px 10px 0px 5px;
+
+}
+
+#profile{
+    margin-right: 40px;
+}
+.icon{
+    margin-top: 22px;
+ 
+   
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+    
+#container{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+}
+#autosignin{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 50px;
+    padding-left: 25px;
+}
+input{
+    padding: 10px 20% 10px 5px;
+}
+.forget_password{
+    margin-left: 17%;
+}
+button {
+    padding: 15px 5px 15px 5px;
+    font-size: 15px;
+    width: 32%;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    background-color: rgb(45, 43, 43);
+    color: white;
+}
+.bottom{
+    display: flex;
+}
+.login{
+    margin-left: 5px;
+    font-size: 17px;
+    margin-top: 15px;
+}
+#loggedin{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fb {
+    background-color: dodgerblue;
+    margin-right: 100px;
+}
+
+.google {
+    background-color: orangered;
+}
+
+.vk {
+    background-color: steelblue;
+}
+.signin{
+    margin-left: 29px;
+}
+.fa-brands {
+    margin-right: 10px;
+}
+button {
+    padding: 15px 5px 15px 5px;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    color: white;
+}
