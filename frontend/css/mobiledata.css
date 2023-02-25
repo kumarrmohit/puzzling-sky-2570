@@ -1,0 +1,114 @@
+ /* All Your css for Home page goes here  */
+ body {
+    /* margin-top: 15px; */
+
+    width: 90%;
+    margin: auto;
+
+}
+
+.anchorlogo {
+    width: 20%;
+    /* border: 1px solid red; */
+    padding: 0px 0px 0px 40px;
+
+}
+
+.icon {
+    margin-top: 12px;
+
+
+}
+
+#profile {
+    margin-right: 40px;
+}
+
+.search {
+    /* padding: 20px 0px 15px 400px; */
+    margin-top: 2px;
+    width: 50%;
+    border-radius: 20px;
+    /* padding:10px 20px 10px 0; */
+    border: 1px solid black;
+    /* // margin-left:20%; */
+    padding: 0px 10px 0px 5px;
+
+}
+
+#cart-page {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+    text-align: center;
+}
+
+img {
+    width: 50%;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px 20% 10px 5px;
+}
+
+
+ul li{
+display: inline-block;
+position: relative;
+}
+ul li a{
+display: block;
+padding: 20px 25px;
+text-decoration: none;
+font-size: 20px;
+color: black;
+}
+ul li ul.dropdown li{
+display: block;
+}
+ul li ul.dropdown{
+width: 100%;
+background: white;
+position: absolute;
+z-index: 999;
+display: none;
+padding: 20px;
+font-size: 20px;
+row-gap: 20px;
+color: rgb(13, 50, 86) ;
+width: 130%;
+}
+ul li ul li ul.dropdowns{
+
+background: white;
+position: absolute;
+z-index: 999;
+display: none;
+padding: 20px;
+font-size: 20px;
+row-gap: 20px;
+color: rgb(13, 50, 86) ;
+width: 130%;
+}
+ul li a:hover{
+background: white;
+
+}
+ul li:hover ul.dropdown{
+display: block;
+}
+#categorybar{
+font-weight: bolder;
+}
+button{
+    padding: 10px;
+    background-color: dodgerblue;
+    border: none;
+}

@@ -1,9 +1,9 @@
 const mongoose=require("mongoose")
 
 const noteSchema=mongoose.Schema({
-    title:String,
+    Image:String,
     body:String,
-    user:String,
+    price:String,
 })
 
 const NoteModel=mongoose.model("note",noteSchema)

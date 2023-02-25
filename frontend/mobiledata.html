@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/mobiledata.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="navbar">
+        <a class="anchorlogo" href="./homepage.html"> <img class="logo"
+                src="https://www.gearbest.com/u_file/2211/10/photo/logogearbest-5cd0.webp" alt=""></a>
+        <input class="search" type="text" placeholder="Search any product here">
+        <div class="icon">
+            <a href="./signup.html"><i id="profile" class="fa-solid fa-user fa-2xl"></i></a>
+
+            <a href="./cart.html"> <i class="fa-solid fa-bag-shopping fa-2xl"></i></a> 
+        </div>
+
+    </div>
+    <br>
+    <ul id="categorybar">
+
+        <i class="fa-solid fa-bars fa-2xl"></i>
+        <li><a href="#">All Categories</a>
+
+            <ul class="dropdown">
+                <a href="./mobiledata.html">
+                    <li>Cell Phone & Accessories</li>
+                </a>
+
+                <a href="">
+                    <li>Laptops and Tablets</li>
+                </a>
+
+                <a href="">
+                    <li>Consumer Electronics</li>
+                </a>
+
+                <a href="">
+                    <li>Computer & office</li>
+                </a>
+
+                <a href="">
+                    <li>3D Printers and Engravers</li>
+                </a>
+
+                <a href="">
+                    <li>Home & Gardens</li>
+                </a>
+
+                <a href="">
+                    <li>Home Appliances</li>
+                </a>
+
+                <a href="">
+                    <li>Sports and Entertainment</li>
+                </a>
+
+                <a href="">
+                    <li>Drone,Toys and Hobbies</li>
+                </a>
+            </ul>
+        </li>
+        <li><a href="./homepage.html">Home</a></li>
+        <li><a href="#">All Collections</a></li>
+        <li><a href="#">Super Deals</a></li>
+    </ul>
+    <br>
+    <br>
+    <select id="filter">
+        <option value="">Filter By Brand</option>
+        <option value="Global">Global</option>
+        <option value="Cubot ">Cubot </option>
+        <option value="UMIDIGI">UMIDIGI</option>
+        <option value="DOOGEE">DOOGEE</option>
+        <option value="Ulefone">Ulefone</option>
+        <option value="OUKITEL">OUKITEL</option>
+    </select>
+    <div id="parent">
+        <h1 id="image"></h1>
+        <p id="body"></p>
+        <p id="price"></p>
+    </div>
+
+    <div id="cart-page">
+
+    </div>
+
+</body>
+<script>
+    let filterSelect = document.querySelector("#filter")
+    let fetchedData = []
+    console.log(filterSelect)
+    let cartdata = document.getElementById("cart-page")
+    const getData = () => {
+        fetch("http://localhost:8080/notes/", {
+            headers: {
+                "Authorization": localStorage.getItem("token")
+            }
+        }).then(res => res.json())
+            .then(data => {
+                fetchedData = data;
+                console.log(fetchedData)
+                displayProducts(data)
+            })
+            .catch(err => console.log(err))
+    }
+
+    getData()
+
+    filterSelect.addEventListener("change", function () {
+        if (filterSelect.value == "") {
+            displayProducts(fetchedData)
+        } else {
+            let filtered = fetchedData.filter((el) => {
+                if (el.body[0] == filterSelect.value[0]) {
+                    return true
+                }
+                return false;
+            })
+
+
+            displayProducts(filtered)
+        }
+
+    })
+    function displayProducts(data) {
+        cartdata.innerHTML = null
+        data.forEach((element) => {
+            let card = document.createElement("div");
+            let Image = document.createElement("img")
+            Image.setAttribute("src", element.Image)
+
+            let body = document.createElement("p")
+            body.innerText = element.body;
+
+            let price = document.createElement("h3")
+            price.innerText = element.price;
+
+            let Favourites = document.createElement("button")
+            Favourites.innerText = "Add to cart"
+
+            Favourites.addEventListener("click",function(){
+                alert("Product added to cart successfully")
+            let favData=JSON.parse(localStorage.getItem("cartdata"))||[]
+            
+             favData.push(element)
+            localStorage.setItem("cartdata",JSON.stringify(favData))
+            })
+            card.append(Image, body, price, Favourites)
+            cartdata.append(card)
+
+        })
+    }
+
+
+</script>
+
+</html>
