@@ -117,7 +117,7 @@ let newData=fetchedData.filter(function(el){
     console.log(filterSelect)
     let cartdata = document.getElementById("cart-page")
     const getData = () => {
-        fetch("http://localhost:8080/notes/", {
+        fetch("https://busy-cyan-clam-hat.cyclic.app/notes/", {
             headers: {
                 "Authorization": localStorage.getItem("token")
             }
