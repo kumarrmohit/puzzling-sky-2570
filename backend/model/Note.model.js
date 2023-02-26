@@ -3,7 +3,7 @@ const mongoose=require("mongoose")
 const noteSchema=mongoose.Schema({
     Image:String,
     body:String,
-    price:String,
+    price:Number,
 })
 
 const NoteModel=mongoose.model("note",noteSchema)

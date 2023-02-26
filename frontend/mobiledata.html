@@ -16,11 +16,11 @@
     <div id="navbar">
         <a class="anchorlogo" href="./homepage.html"> <img class="logo"
                 src="https://www.gearbest.com/u_file/2211/10/photo/logogearbest-5cd0.webp" alt=""></a>
-        <input class="search" type="text" placeholder="Search any product here">
+        <input class="search" oninput="search()" type="text" placeholder="Search any product here">
         <div class="icon">
             <a href="./signup.html"><i id="profile" class="fa-solid fa-user fa-2xl"></i></a>
 
-            <a href="./cart.html"> <i class="fa-solid fa-bag-shopping fa-2xl"></i></a> 
+            <a href="./cart.html"> <i class="fa-solid fa-bag-shopping fa-2xl"></i></a>
         </div>
 
     </div>
@@ -83,6 +83,10 @@
         <option value="Ulefone">Ulefone</option>
         <option value="OUKITEL">OUKITEL</option>
     </select>
+    <select id="sort">
+       <option value="Low to high">Low to high</option>
+       <option value="High to low">High to low</option>
+    </select>
     <div id="parent">
         <h1 id="image"></h1>
         <p id="body"></p>
@@ -95,8 +99,21 @@
 
 </body>
 <script>
+     let fetchedData = []
+
+function search(){
+let q=document.querySelector("input").value
+console.log(q)
+let newData=fetchedData.filter(function(el){
+  return el.body.toLowerCase().includes(q.toLowerCase())
+
+})
+    displayProducts(newData)
+}
+
+
     let filterSelect = document.querySelector("#filter")
-    let fetchedData = []
+   
     console.log(filterSelect)
     let cartdata = document.getElementById("cart-page")
     const getData = () => {
@@ -147,18 +164,37 @@
             let Favourites = document.createElement("button")
             Favourites.innerText = "Add to cart"
 
-            Favourites.addEventListener("click",function(){
+            Favourites.addEventListener("click", function () {
                 alert("Product added to cart successfully")
-            let favData=JSON.parse(localStorage.getItem("cartdata"))||[]
-            
-             favData.push(element)
-            localStorage.setItem("cartdata",JSON.stringify(favData))
+                let favData = JSON.parse(localStorage.getItem("cartdata")) || []
+
+
+
+                favData.push(element)
+                localStorage.setItem("cartdata", JSON.stringify(favData))
             })
             card.append(Image, body, price, Favourites)
             cartdata.append(card)
 
         })
     }
+
+    let sort_Data=document.querySelector("#sort")
+    console.log(sort_Data)
+    sort_Data.addEventListener("change",()=>{
+      if(sort_Data.value=="Low to high"){
+        fetchedData.sort((a,b)=>{
+            return a.price-b.price;
+        })
+        displayProducts(fetchedData)
+      }
+      if(sort_Data.value=="High to low"){
+        fetchedData.sort((a,b)=>{
+            return b.price-a.price;
+        })
+      }
+      displayProducts(fetchedData)
+    })
 
 
 </script>

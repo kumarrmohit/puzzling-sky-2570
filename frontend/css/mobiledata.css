@@ -46,6 +46,7 @@
 
 img {
     width: 50%;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; 
 }
 
 #navbar {
@@ -109,6 +110,19 @@ font-weight: bolder;
 }
 button{
     padding: 10px;
-    background-color: dodgerblue;
+    background-color: rgb(66, 18, 66);
+    color: white;
     border: none;
+   margin: 2px;
+}
+#filter{
+    padding: 5px;
+    font-size: 20px;
+}
+#sort{
+    padding: 5px;
+    font-size: 20px;
+}
+.search{
+    font-size: 20px;
 }

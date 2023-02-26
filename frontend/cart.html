@@ -70,6 +70,66 @@
         <li><a href="#">All Collections</a></li>
         <li><a href="#">Super Deals</a></li>
     </ul>
+    <h2>SHOPPING CART</h2>
+    <h1 id="total">You have <span id="fav-total">0</span> product in the cart</h1>
+    <h2 id="total bill">Total Bill:- <span id="Bill">0</span> </h2>
+
+    <div id="cartappend">
+
+    </div>
     
 </body>
 </html>
+<script>
+     let container = document.getElementById('cartappend')
+    let favData = JSON.parse(localStorage.getItem("cartdata")) || []
+    let TotalTask = document.getElementById("fav-total")
+    let TotalBill = document.getElementById("Bill")
+
+
+
+    displayProduct(favData)
+
+    function displayProduct(data, i) {
+        container.innerHTML = null
+        TotalTask.textContent = data.length
+        var a = data.reduce((acc, curr) => {
+            acc += curr.price
+            return acc;
+        }, 0)
+        TotalBill.textContent = a
+        data.forEach(function (el) {
+            let parent = document.querySelector("#cart-page")
+            let card = document.createElement("div")
+            let Image = document.createElement('img')
+            Image.setAttribute("src", el.Image)
+            let body = document.createElement('p')
+            body.textContent = el.body
+            
+            let price = document.createElement('p')
+            price.textContent =el.price;
+
+            let buy=document.createElement('button')
+             buy.textContent="Buy Now"
+
+             buy.addEventListener("click",function(){
+                alert("Please fill your address/payment detail")
+                window.location.assign("./shippment.html")
+             })
+
+            let Remove = document.createElement('button')
+            Remove.textContent = "Remove Item"
+
+            Remove.addEventListener("click", function () {
+                favData.splice(i, 1)
+                localStorage.setItem("cartdata", JSON.stringify(favData))
+                displayProduct(favData)
+
+             
+
+            })
+            card.append(Image, name,body,price, Remove,buy)
+            container.append(card)
+        })
+    }
+</script>

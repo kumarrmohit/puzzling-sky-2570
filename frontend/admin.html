@@ -50,6 +50,15 @@
         background-color: #fff;
         border: 1px solid #ccc;
       }
+    input{
+      padding: 10px;
+    }
+    button{
+    padding: 10px 30px 10px 20px;
+    background-color: dodgerblue;
+    border: none;
+}
+    
     </style>
   </head>
   <body>
@@ -58,7 +67,7 @@
     </div>
     <div id="nav">
       <ul>
-        <li><a href="#">Dashboard</a></li>
+        <li><a href="./mobiledata.html">Dashboard</a></li>
         <li><a href="#">Users</a></li>
         <li><a href="#">Content</a></li>
         <li><a href="#">Settings</a></li>
@@ -70,23 +79,15 @@
     </div>
 
     <div id="container">
-        <h1>Notes Creation Page</h1>
+        <h1>Add product page</h1>
         <input type="url" id="image" placeholder="Enter product image here..">
         <input type="text" id="body" placeholder="Enter note body..">
         <input type="text" id="price" placeholder="Enter the price for customers..">
         <button onclick="onAdd()">Add</button>
         
     </div>
-  <br>
-  <br>
-  <div id="container">
-    <h1>Notes Creation Page</h1>
-    <input type="url" id="image" placeholder="Enter product image here..">
-    <input type="text" id="body" placeholder="Enter note body..">
-    <input type="text" id="price" placeholder="Enter the price for customers..">
-    <button onclick="onUpdate()">update the product details</button>
-    
-</div>
+   
+
    
   </body>
 </html>
@@ -109,22 +110,10 @@
         .then(res=>console.log(res))
         .catch(err=>console.log(err))
     }
+  
 
-    const onUpdate=()=>{
-        const payload={
-            Image:document.getElementById("image").value,
-            body:document.getElementById("body").value,
-            price:document.getElementById("price").value,
-        }
-        fetch("http://localhost:8080/notes/update/:id",{
-            method:"PUT",
-            headers:{
-                "Content-type":"application/json",
-            },
-            body:JSON.stringify(payload)
-        }).then(res=>res.json())
-        .then(res=>console.log(res))
-        .catch(err=>console.log(err))
-    }
+
+
+</script>
     
 </script>
