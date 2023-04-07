@@ -76,7 +76,7 @@
             Password:document.getElementById("password").value
         }
         //console.log(payload)
-        fetch("http://localhost:8080/users/login",{
+        fetch("https://gifted-cyan-jumper.cyclic.app/users/login",{
             method:"POST",
             headers:{
                 "Content-type":"application/json"
@@ -89,5 +89,6 @@
         })
         .catch(err=>console.log(err))
         alert("Congats!, you are logged in successfully")
+        window.location.assign("./homepage.html")
     }
 </script>
