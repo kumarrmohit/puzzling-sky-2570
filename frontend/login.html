@@ -13,7 +13,7 @@
 
 <body>
     <div id="navbar">
-    <a class="anchorlogo" href="./homepage.html"> <img class="logo" src="https://www.gearbest.com/u_file/2211/10/photo/logogearbest-5cd0.webp" alt=""></a>   
+    <a class="anchorlogo" href="./homepage.html"> <img class="logo" src="https://www.gearbest.com/u_file//2211/10/photo/logogearbest-5cd0.webp?x-oss-process=image/format,webp/resize,m_lfit,h_0,w_200" alt=""></a>   
         <input class="search" type="text" placeholder="Search any product here">
         <div class="icon">
             <a href="./signup.html"><i id="profile" class="fa-solid fa-user fa-2xl"></i></a>
@@ -76,7 +76,7 @@
             Password:document.getElementById("password").value
         }
         //console.log(payload)
-        fetch("https://busy-cyan-clam-hat.cyclic.app/users/login",{
+        fetch("http://localhost:8080/users/login",{
             method:"POST",
             headers:{
                 "Content-type":"application/json"

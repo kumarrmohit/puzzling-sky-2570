@@ -15,7 +15,7 @@
 <body>
     <div id="navbar">
         <a class="anchorlogo" href="./homepage.html"> <img class="logo"
-                src="https://www.gearbest.com/u_file/2211/10/photo/logogearbest-5cd0.webp" alt=""></a>
+                src="https://www.gearbest.com/u_file//2211/10/photo/logogearbest-5cd0.webp?x-oss-process=image/format,webp/resize,m_lfit,h_0,w_200" alt=""></a>
         <input class="search" oninput="search()" type="text" placeholder="Search any product here">
         <div class="icon">
             <a href="./signup.html"><i id="profile" class="fa-solid fa-user fa-2xl"></i></a>
@@ -117,7 +117,7 @@ let newData=fetchedData.filter(function(el){
     console.log(filterSelect)
     let cartdata = document.getElementById("cart-page")
     const getData = () => {
-        fetch("https://busy-cyan-clam-hat.cyclic.app/notes/", {
+        fetch("http://localhost:8080/notes/", {
             headers: {
                 "Authorization": localStorage.getItem("token")
             }
