@@ -1,0 +1,236 @@
+body{
+    width: 90%;
+    margin: auto;
+  
+}
+.logo{
+    
+    width: 70%;
+}
+.anchorlogo{
+    width: 20%;
+    /* border: 1px solid red; */
+    padding: 0px 0px 0px 40px;
+
+}
+.search{
+    /* padding: 20px 0px 15px 400px; */
+    margin-top: 2px;
+    width: 50%;
+    border-radius: 20px;
+    /* padding:10px 20px 10px 0; */
+    border:1px solid black;
+   /* // margin-left:20%; */
+   padding: 0px 10px 0px 5px;
+
+}
+
+#profile{
+    margin-right: 40px;
+}
+.icon{
+    margin-top: 22px;
+ 
+   
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+   position: sticky;
+}
+input{
+    padding: 10px 20% 10px 5px;
+}
+
+
+/* ==================== */
+#main{
+    position: relative;
+}
+img{
+   
+    width: 100%;
+}
+#bottom{
+    display: flex;
+    gap: 10px;
+   
+}
+#allimages{
+    display: flex;
+   gap: 5px;
+    justify-content: space-between;
+    height: 560px
+}
+.firstimg{
+  width: 170%;
+  height: 100%;
+}
+.firstthreemob{
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+.secondthreemob{
+    display: flex;
+    justify-content: space-evenly;
+}
+.one{
+    width: 30%;
+    height: 300px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.two{
+    width: 40%;
+    height: 300px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#firstmob{
+    height: 280px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#getmobdata{
+    display: flex;
+   justify-content: space-evenly;
+}
+.oneplusimg{
+    width: 100%;
+    height: 600px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#hotdeal{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+   gap: 20px;
+  
+    height: 1000px;
+    padding: 20px;
+    text-align: center;
+}
+.hotdealfirst{
+    height: 500px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.hotdealsecond{
+    height: 500px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 5 px
+}
+.hots{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+#topsales{
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    text-align: center;
+}
+.top{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+#blog{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    text-align: center;
+}
+.blog1{
+    height: 300px;
+}
+.blog2{
+    height: 300px;
+}
+#lastestblogheading{
+    text-align: center;
+}
+#partner{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.partner1{
+    height: 150px;
+    width: 90%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+ul li ul.dropdown li{
+    display: block;
+}
+ul li ul.dropdown{
+    width: 100%;
+    background: white;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    padding: 20px;
+    font-size: 20px;
+   row-gap: 20px;
+   color: rgb(13, 50, 86) ;
+   width: 130%;
+}
+ul li ul li ul.dropdowns{
+  
+    background: white;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    padding: 20px;
+    font-size: 20px;
+   row-gap: 20px;
+   color: rgb(13, 50, 86) ;
+   width: 130%;
+}
+ul li a:hover{
+    background: white;
+   
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+#categorybar{
+    font-weight: bolder;
+}
+#footer{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 70px 70px 40px;
+    background-color: grey;
+    color: white;
+    height: 280px;
+}
+#footer ul{
+    font-size: 20px;
+
+}
+#footer a{
+  color: white;
+}
+.footerimage{
+    width: 20%;
+}
+h3{
+    margin-left: 40px;
+    font-size: larger;
+}
+.subs{
+    padding: 10px;
+    background-color: dodgerblue;
+    border: none;
+}
