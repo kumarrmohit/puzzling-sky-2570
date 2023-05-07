@@ -19,7 +19,7 @@ A user can filter the name and sort the price too.
 Allow the user to delete any product from the cart and can check the total count in the cart as well .
 
 
-Tech-Stack 
+Tech-Stack:-
 HTML CSS | GIT | JAVASCRIPT | Node JS | JWT | bcrypt | Cyclic | Mongo DB 
 
 
