@@ -1,9 +1,7 @@
 # puzzling-sky-2570
 
 
-Netlify link-
 
-https://tranquil-halva-6e24e0.netlify.app/homepage.html
 
 [check my website from this link mentioned above]
 
